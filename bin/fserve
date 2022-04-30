@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+[[ ! -f "$1" ]] \
+  && echo "Error: \"$1\" is not a valid file!" >&2 \
+  && exit 1;
+
+echo "Serving on: http://$(hostname -I | cut -d' ' -f1):8080 / http://localhost:8080"
+
+{
+  echo -ne 'HTTP/1.1 200 OK\r\n'
+  echo -ne "Content-Length: $(wc -c <"$1")\r\n"
+  echo -ne "Content-Disposition: attachment; filename=\"$(basename "$1")\"\r\n\r\n"
+  cat "$1"
+} | nc -q 1 -l 8080

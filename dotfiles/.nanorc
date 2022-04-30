@@ -1,0 +1,7 @@
+set autoindent
+set linenumbers
+set mouse
+set trimblanks
+
+set nowrap
+# set softwrap
