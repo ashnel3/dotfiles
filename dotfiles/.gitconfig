@@ -1,9 +1,0 @@
-[core]
-    editor = nano
-    untrackedCache = true
-
-[color]
-    ui = auto
-
-[commit]
-    gpgsign = true
