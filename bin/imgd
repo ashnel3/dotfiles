@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+for path in "$@"; do
+  identify -format '%wx%h' "$path"
+done

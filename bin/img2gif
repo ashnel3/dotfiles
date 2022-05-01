@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+PALETTE_FILENAME="palette.png"
+
+img2gif() {
+  local framerate="$2"
+  local out_filename="$3"
+  [[ -n "$1" ]] \
+    && echo "Error: invalid files!" >&2 \
+    && exit 1
+  [[ -n "$framerate" ]] \
+    framerate="30"
+  [[ -n "$out_filename" ]] \
+    && out_filename="$(basename "$1")"
+  ffmpeg -i "$1" -vf palettegen "$PALETTE_FILENAME" \
+    && ffmpeg -framerate "$framerate" -i "$1" -i "$PALETTE_FILENAME" -lavfi paletteuse=alpha_threshold=128 "$out_filename"
+  rm -f palette.png
+}

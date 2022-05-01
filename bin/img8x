@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+source '../lib/img.sh'
+
+imagemagik_scale '800%' "$@"
