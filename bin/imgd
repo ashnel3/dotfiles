@@ -2,4 +2,5 @@
 
 for path in "$@"; do
   identify -format '%wx%h' "$path"
+  echo ""
 done
