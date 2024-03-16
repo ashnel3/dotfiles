@@ -1,0 +1,19 @@
+{
+  "downloadSelfUpdates": true,
+  "offlineMode": false,
+  "installLocations": {},
+  "defaultInstallLocation": "appdata",
+  "isolateApps": false,
+  "closeToTray": false,
+  "readyNotification": true,
+  "showAdvanced": true,
+  "openAtLogin": false,
+  "openAsHidden": false,
+  "manualGameUpdates": false,
+  "preventDisplaySleep": true,
+  "preferOptimizedPatches": false,
+  "disableBrowser": false,
+  "enableTabs": false,
+  "importedOldInstallLocations": true,
+  "gotMinimizeNotification": true
+}
