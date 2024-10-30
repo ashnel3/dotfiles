@@ -1,0 +1,10 @@
+set backup
+set autoindent
+set indicator
+set minibar
+set mouse
+set constantshow
+set linenumbers
+set speller "aspell -x -c"
+set tabsize 2
+set tabstospaces
